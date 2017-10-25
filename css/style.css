@@ -1,3 +1,109 @@
 body{
-    background-color: red;
+    background-color: #FFFFFF;
 }
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+h1{
+
+  font-size: 22pt;
+  color: olivedrab;
+  margin: 0;
+  text-align: center;
+}
+section p{
+  color:cadetblue;
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+
+}
+section h1{
+  font-family: 'VT323', monospace;
+  color: darkgray;
+
+}
+header{
+  background-color: #FFFFFF;
+  padding: 20px;
+
+}
+header p{
+  font-family: 'Indie Flower', cursive;
+  font-family: 'Abril Fatface', cursive;
+  color:cornflowerblue;
+  text-align: center;
+}
+header h1{
+  font-family: 'Shadows Into Light', cursive;
+}
+section{
+ padding:20px;
+}
+.greenSection{
+  background-color: #FFFFFF;
+}
+
+footer{
+  background-color:#FFFFFF;
+  padding: 20px;
+
+}
+footer p {
+  color: hotpink;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+@supports (grid-area: auto) {
+
+  @media screen and (min-width: 600px) {
+
+    body {
+      background-color: red;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: repeat(6, 16.6%);
+      grid-template-areas: "header header" "GSec1 GSec1"  "footer footer";
+    }
+
+      header{
+        grid-area:header;
+
+      }
+
+      .GSec1{
+        grid-area: GSec1;
+
+      }
+
+
+
+      footer{
+        grid-area: footer;
+      }
+
+    }
+
+
+
+    @media screen and (min-width: 1000px){
+
+     body{
+       background-color: white;
+       grid-template-columns: 33.3% 33.3% 33.3%;
+       grid-template-areas:
+                          "header GSec1 footer"
+     }
+
+
+   }
+  }
+
+
